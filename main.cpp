@@ -44,5 +44,6 @@ int main(int argc, char** argv)
 		std::cout << "Error: Unable to write to output file" << std::endl;
 		exit(EXIT_FAILURE);
 	}
+	std::cout << "Successfully written to " << outputFile << " and " << headerFile << std::endl;
 	return 0;
 }
