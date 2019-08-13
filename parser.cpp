@@ -50,7 +50,11 @@ std::vector<IOExternalMethodDispatch> Parser::start()
 	{
 		IOExternalMethodDispatch method;
 		success = parseMethod(strMethods[i], i, method);
-		if (!success) goto fail;
+		if (!success)
+		{
+			std::cout << "Warning: Unable to parse selector " << i << ", skipping." << std::endl;
+			continue;
+		}
 		vec.push_back(method);
 	}
 	return vec;
