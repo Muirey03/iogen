@@ -16,7 +16,7 @@ make install
 iogen input_file [-o output_file] [-h header_output_file]
 ```
 **Example:**
-There is a `sample_input.txt` file included in this repo which will generate the wrapper functions for IOHIDLibUserClient:
+There is a `sample_input.txt` file included in this repo (taken directly from IOHIDLibUserClient.cpp) which will generate the wrapper functions for IOHIDLibUserClient:
 ```
 iogen sample_input.txt -o iohid.c
 ```
