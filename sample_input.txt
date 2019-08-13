@@ -1,0 +1,89 @@
+const IOExternalMethodDispatch IOHIDLibUserClient::
+sMethods[kIOHIDLibUserClientNumCommands] = {
+	{ //	kIOHIDLibUserClientDeviceIsValid
+	(IOExternalMethodAction) &IOHIDLibUserClient::_deviceIsValid,
+	0, 0,
+	2, 0
+	},
+	{ //	kIOHIDLibUserClientOpen
+	(IOExternalMethodAction) &IOHIDLibUserClient::_open,
+	1, 0,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientClose
+	(IOExternalMethodAction) &IOHIDLibUserClient::_close,
+	0, 0,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientCreateQueue
+	(IOExternalMethodAction) &IOHIDLibUserClient::_createQueue,
+	2, 0,
+	1, 0
+	},
+	{ //	kIOHIDLibUserClientDisposeQueue
+	(IOExternalMethodAction) &IOHIDLibUserClient::_disposeQueue,
+	1, 0,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientAddElementToQueue
+	(IOExternalMethodAction) &IOHIDLibUserClient::_addElementToQueue,
+	3, 0,
+	1, 0
+	},
+	{ //	kIOHIDLibUserClientRemoveElementFromQueue
+	(IOExternalMethodAction) &IOHIDLibUserClient::_removeElementFromQueue,
+	2, 0,
+	1, 0
+	},
+	{ //	kIOHIDLibUserClientQueueHasElement
+	(IOExternalMethodAction) &IOHIDLibUserClient::_queueHasElement,
+	2, 0,
+	1, 0
+	},
+	{ //	kIOHIDLibUserClientStartQueue
+	(IOExternalMethodAction) &IOHIDLibUserClient::_startQueue,
+	1, 0,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientStopQueue
+	(IOExternalMethodAction) &IOHIDLibUserClient::_stopQueue,
+	1, 0,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientUpdateElementValues
+	(IOExternalMethodAction) &IOHIDLibUserClient::_updateElementValues,
+	0xffffffff, 0,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientPostElementValues
+	(IOExternalMethodAction) &IOHIDLibUserClient::_postElementValues,
+	0xffffffff, 0,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientGetReport
+	(IOExternalMethodAction) &IOHIDLibUserClient::_getReport,
+	3, 0,
+	0, 0xffffffff
+	},
+	{ //	kIOHIDLibUserClientSetReport
+	(IOExternalMethodAction) &IOHIDLibUserClient::_setReport,
+	3, 0xffffffff,
+	0, 0
+	},
+	{ //	kIOHIDLibUserClientGetElementCount
+	(IOExternalMethodAction) &IOHIDLibUserClient::_getElementCount,
+	0, 0,
+	2, 0
+	},
+	{ //	kIOHIDLibUserClientGetElements
+	(IOExternalMethodAction) &IOHIDLibUserClient::_getElements,
+	1, 0,
+	0, 0xffffffff
+	},
+	// ASYNC METHODS
+	{ //	kIOHIDLibUserClientSetQueueAsyncPort
+	(IOExternalMethodAction) &IOHIDLibUserClient::_setQueueAsyncPort,
+	1, 0,
+	0, 0
+	}
+};
